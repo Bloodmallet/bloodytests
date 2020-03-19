@@ -24,7 +24,7 @@ def main():
     tests = loader.discover(start_dir=this_dir, pattern=pattern)
     suite.addTests(tests)
 
-    result = ExtendableTextTestRunner().run(suite)
+    result = BloodyTestRunner().run(suite)
 
     if result.wasSuccessful():
         sys.exit(0)
