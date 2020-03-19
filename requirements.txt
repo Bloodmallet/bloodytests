@@ -1,0 +1,6 @@
+# Requirements for development
+yapf
+pylint
+django
+# hopefully to come:
+# coverage
