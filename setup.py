@@ -10,7 +10,7 @@ def readme():
 
 setup(
     name='bloodytests',
-    version='0.1',
+    version='0.2.0',
     author='Bloodmallet(EU)',
     author_email='kruse.peter.1990@gmail.com',
     description='Some additional features to standard unittest library',
