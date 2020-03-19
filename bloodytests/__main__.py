@@ -19,9 +19,9 @@ def main():
         pattern = 'test*.py'
     suite = unittest.TestSuite()
     loader = unittest.TestLoader()
-    this_dir = os.path.dirname(__file__)
+    executing_dir = os.path.abspath('')
 
-    tests = loader.discover(start_dir=this_dir, pattern=pattern)
+    tests = loader.discover(start_dir=executing_dir, pattern=pattern)
     suite.addTests(tests)
 
     result = BloodyTestRunner().run(suite)
