@@ -4,9 +4,9 @@ from bloodytests.testresult import BloodyTestResult
 
 class BloodyTestRunner(unittest.TextTestRunner):
 
-    def __init__(self, slow_test_threshold=0.3, *args, **kwargs):
+    def __init__(self, slow_test_threshold=0.3, resultclass=BloodyTestResult, *args, **kwargs):
         self.slow_test_threshold = slow_test_threshold
-        super().__init__(resultclass=BloodyTestResult, *args, **kwargs)
+        super().__init__(resultclass=resultclass, *args, **kwargs)
 
     def run(self, test):
         result = super().run(test)
