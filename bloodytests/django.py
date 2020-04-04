@@ -1,10 +1,10 @@
-import django
+from django.test.runner import DiscoverRunner
 
 from bloodytests.testresult import BloodyTestResult
 from bloodytests.testrunner import BloodyTestRunner
 
 
-class BloodyDiscoverRunner(django.test.runner.DiscoverRunner):
+class BloodyDiscoverRunner(DiscoverRunner):
     """Extension of djangos DiscoverRunner to use BloodyTestRunner and
     BloodyTestResult.
     """
