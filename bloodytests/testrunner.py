@@ -11,7 +11,7 @@ class BloodyTestRunner(unittest.TextTestRunner):
     def run(self, test):
         result = super().run(test)
 
-        times = sorted(result.getTestTimes(), key=lambda x: x[1])
+        times = sorted(result.getTestTimes(), key=lambda x: x[1], reverse=True)
 
         if not times:
             return result
